@@ -7,22 +7,35 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        DeviceFrame(
-            device: Devices.ios.iPhone13ProMax,
-            screen: const Center(
-              child: Text(
-                "Hello! Beautiful Souls",
-                style: TextStyle(
-                  color: Colors.pink,
-                  fontSize: 30.0,
-                ),
+     return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                colors: [Colors.blue,Colors.black45]
+              )
+            ),
+          ),
+          Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            DeviceFrame(
+                device: Devices.ios.iPhone13ProMax,
+                screen: const Center(
+                  child: Text(
+                    "Hello! Beautiful Souls",
+                    style: TextStyle(
+                      color: Colors.pink,
+                      fontSize: 30.0,
+                    ),
+                  ),
+                ))
+          ],
               ),
-            ))
-      ],
-    ));
+        ],
+      )
+     );
   }
 }
