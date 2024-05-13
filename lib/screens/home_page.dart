@@ -26,12 +26,15 @@ class HomePage extends StatelessWidget {
           children: [
             DeviceFrame(
                 device: Devices.ios.iPhone13ProMax,
-                screen: const Center(
-                  child: Text(
-                    "Hello! Beautiful Souls",
-                    style: TextStyle(
-                      color: Colors.pink,
-                      fontSize: 30.0,
+                screen: Container(
+                  color: Colors.red,
+                  child: const Center(
+                    child: Text(
+                      "Hello! Beautiful Souls",
+                      style: TextStyle(
+                        color: Colors.pink,
+                        fontSize: 30.0,
+                      ),
                     ),
                   ),
                 ))
