@@ -3,6 +3,9 @@ import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application/models/device_model.dart';
 
-List<DeviceModel> devices [
+List<DeviceModel> devices = [
       DeviceModel(device:Devices.android.onePlus8Pro, data:Icons.android),
+      DeviceModel(device:Devices.ios.iPhone13ProMax, data:Icons.phone_iphone),
+      DeviceModel(device:Devices.ios.iPad, data:Icons.tablet),
+
 ];
