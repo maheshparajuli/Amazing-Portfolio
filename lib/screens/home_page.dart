@@ -1,9 +1,11 @@
 import 'package:custom_button_builder/custom_button_builder.dart';
 import "package:flutter/material.dart";
 import 'package:flutter_application/constants/data.dart';
+import 'package:flutter_application/provider/current_state.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:device_frame/device_frame.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,6 +13,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    CurrentState currentState =
+        Provider.of<CurrentState>(context, listen: false);
     return Scaffold(
       body: Stack(
         children: [
@@ -37,7 +41,7 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: size.height - 100,
                     child: DeviceFrame(
-                        device: Devices.ios.iPhone13ProMax,
+                        device: Devices.currentState.currentDevice,
                         screen: Container(
                           color: Colors.red,
                           child: const Center(
@@ -66,14 +70,16 @@ class HomePage extends StatelessWidget {
                             width: 40,
                             borderRadius: 40,
                             backgroundColor: Colors.black,
-                            onPressed: () {},
+                            onPressed: () {
+                              currentState.changeDevice(devices[index].device);
+                            },
                             isThreeD: true,
                             animate: true,
-                            shadowColor: Colors.pink,
+                            shadowColor: Colors.green,
                             child: Center(
                               child: Icon(
                                 devices[index].data,
-                                color: Colors.white,
+                                color: Colors.green,
                               ),
                             ),
                           ))
