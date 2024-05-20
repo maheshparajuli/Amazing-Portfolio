@@ -67,25 +67,34 @@ class HomePage extends StatelessWidget {
                 children: [
                   ...List.generate(
                       devices.length,
-                      (index) => CustomButton(
-                            height: 40,
-                            width: 40,
-                            borderRadius: 40,
-                            backgroundColor: Colors.black,
-                            onPressed: () {
-                              currentState
-                                  .changeSelectedDevice(devices[index].device);
-                            },
-                            isThreeD: true,
-                            animate: true,
-                            shadowColor: Colors.green,
-                            child: Center(
-                              child: Icon(
-                                devices[index].data,
-                                color: Colors.green,
+                      (index) => Selector<CurrentState, DeviceInfo>(
+                          selector: (context, provider) =>
+                              provider.currentDevice,
+                          builder: (context, _, __) {
+                            return CustomButton(
+                              height: 40,
+                              width: 40,
+                              borderRadius: 40,
+                              backgroundColor: Colors.black,
+                              onPressed: () {
+                                currentState.changeSelectedDevice(
+                                    devices[index].device);
+                              },
+                              animate: true,
+                              pressed: currentState.currentDevice ==
+                                      devices[index].device
+                                  ? Pressed.pressed
+                                  : Pressed.notPressed,
+                              isThreeD: true,
+                              shadowColor: Colors.green,
+                              child: Center(
+                                child: Icon(
+                                  devices[index].data,
+                                  color: Colors.green,
+                                ),
                               ),
-                            ),
-                          ))
+                            );
+                          }))
                 ],
               )
             ],
