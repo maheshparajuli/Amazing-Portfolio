@@ -40,20 +40,22 @@ class HomePage extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: size.height - 100,
-                    child: DeviceFrame(
-                        device: Devices.currentState.currentDevice,
-                        screen: Container(
-                          color: Colors.red,
-                          child: const Center(
-                            child: Text(
-                              "Hello! Beautiful Souls",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30.0,
+                    child: Consumer<CurrentState>(builder: (context, _, __) {
+                      return DeviceFrame(
+                          device: currentState.currentDevice,
+                          screen: Container(
+                            color: Colors.red,
+                            child: const Center(
+                              child: Text(
+                                "Hello! Beautiful Souls",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30.0,
+                                ),
                               ),
                             ),
-                          ),
-                        )),
+                          ));
+                    }),
                   ),
                 ],
               ),
@@ -71,7 +73,8 @@ class HomePage extends StatelessWidget {
                             borderRadius: 40,
                             backgroundColor: Colors.black,
                             onPressed: () {
-                              currentState.changeDevice(devices[index].device);
+                              currentState
+                                  .changeSelectedDevice(devices[index].device);
                             },
                             isThreeD: true,
                             animate: true,
