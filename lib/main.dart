@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application/provider/current_state.dart';
 import 'package:flutter_application/screens/home_page.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_application/provider/current_state.dart';
+
 
 void main() {
   runApp(const MyApp());
