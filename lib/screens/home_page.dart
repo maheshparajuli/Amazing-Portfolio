@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:custom_button_builder/custom_button_builder.dart';
 import "package:flutter/material.dart";
 import 'package:flutter_application/constants/data.dart';
@@ -7,6 +5,7 @@ import 'package:flutter_application/provider/current_state.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:device_frame/device_frame.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_application/widgets/frosted_container.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -33,15 +32,15 @@ class HomePage extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
+                  const Column(
                     children: [
-                
+                      FrostedContainer(),
                     ],
                   ),
                   SizedBox(
