@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:custom_button_builder/custom_button_builder.dart';
 import "package:flutter/material.dart";
 import 'package:flutter_application/constants/data.dart';
@@ -37,6 +39,11 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Column(
+                    children: [
+                
+                    ],
+                  ),
                   SizedBox(
                     height: size.height - 100,
                     child: Consumer<CurrentState>(
