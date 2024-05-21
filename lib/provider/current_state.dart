@@ -10,5 +10,3 @@ class CurrentState extends ChangeNotifier {
     notifyListeners();
   }
 }
-
-
