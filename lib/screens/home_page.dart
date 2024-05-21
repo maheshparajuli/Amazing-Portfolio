@@ -39,7 +39,8 @@ class HomePage extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: size.height - 100,
-                    child: Consumer<CurrentState>(builder: (context, _, __) {
+                    child: Consumer<CurrentState>(
+                        builder: (context, ccurrentState, __) {
                       return DeviceFrame(
                           device: currentState.currentDevice,
                           screen: Container(
