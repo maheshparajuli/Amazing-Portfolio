@@ -3,7 +3,6 @@ import "package:flutter/material.dart";
 import 'package:flutter_application/constants/data.dart';
 import 'package:flutter_application/provider/current_state.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:device_frame/device_frame.dart';
 import 'package:provider/provider.dart';
 
