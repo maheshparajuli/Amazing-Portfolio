@@ -41,15 +41,18 @@ class HomePage extends StatelessWidget {
                   const Column(
                     children: [
                       FrostedContainer(
-                        width: 200,
-                        height: 300,
-                      ),
+                          width: 200,
+                          height: 300,
+                          childG: Wrap(
+                            children: [],
+                          )),
                       SizedBox(
                         height: 20,
                       ),
                       FrostedContainer(
                         width: 200,
                         height: 150,
+                        childG: Wrap(),
                       ),
                     ],
                   ),
@@ -78,6 +81,7 @@ class HomePage extends StatelessWidget {
                       FrostedContainer(
                         width: 200,
                         height: 300,
+                        childG: Wrap(),
                       ),
                       SizedBox(
                         height: 20,
@@ -85,6 +89,7 @@ class HomePage extends StatelessWidget {
                       FrostedContainer(
                         width: 200,
                         height: 150,
+                        childG: Wrap(),
                       ),
                     ],
                   ),
