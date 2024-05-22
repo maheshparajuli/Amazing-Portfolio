@@ -40,7 +40,17 @@ class HomePage extends StatelessWidget {
                 children: [
                   const Column(
                     children: [
-                      FrostedContainer(),
+                      FrostedContainer(
+                        width: 200,
+                        height: 300,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      FrostedContainer(
+                        width: 200,
+                        height: 150,
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -63,7 +73,21 @@ class HomePage extends StatelessWidget {
                           ));
                     }),
                   ),
-                  
+                  const Column(
+                    children: [
+                      FrostedContainer(
+                        width: 200,
+                        height: 300,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      FrostedContainer(
+                        width: 200,
+                        height: 150,
+                      ),
+                    ],
+                  ),
                 ],
               ),
               const SizedBox(
