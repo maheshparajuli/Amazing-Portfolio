@@ -93,6 +93,9 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {
                                     currentState.changeGradient(index);
                                   },
+                                  pressed: currentState.selectedwala == index
+                                      ? Pressed.pressed
+                                      : Pressed.notPressed,
                                   animate: true,
                                   isThreeD: true,
                                   height: 54,
