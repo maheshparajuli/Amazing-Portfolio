@@ -38,15 +38,30 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Column(
+                  Column(
                     children: [
                       FrostedContainer(
                           width: 200,
                           height: 300,
                           childG: Wrap(
-                            children: [],
+                            children: [
+                              ...List.generate(
+                                colorPalette.length,
+                                (index) => CustomButton(
+                                  margin: EdgeInsets.all(4),
+                                  onPressed: () {},
+                                  animate: true,
+                                  isThreeD: true,
+                                  height: 54,
+                                  width: 52,
+                                  borderRadius: 100,
+                                  shadowColor: Colors.white,
+                                  backgroundColor: colorPalette[index].color,
+                                ),
+                              ),
+                            ],
                           )),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       FrostedContainer(
