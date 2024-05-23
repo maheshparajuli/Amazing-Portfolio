@@ -18,17 +18,24 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    colors: [Colors.blue, Colors.black45])),
-          ),
-          SvgPicture.asset(
-            "assets/images/blue_cloud.svg",
-            height: size.height,
-            fit: BoxFit.cover,
-          ),
+          Selector<CurrentState, int>(
+              selector: (context, provider) => provider.selectedwala,
+              builder: (context, _, __) {
+                return Container(
+                  decoration: BoxDecoration(
+                      gradient:
+                          colorPalette[currentState.selectedwala].gradient),
+                );
+              }),
+          Selector<CurrentState, int>(
+              selector: (context, provider) => provider.selectedwala,
+              builder: (context, _, __) {
+                return SvgPicture.asset(
+                  colorPalette[currentState.selectedwala].svgPath,
+                  height: size.height,
+                  fit: BoxFit.cover,
+                );
+              }),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -38,30 +45,10 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
+                  const Column(
                     children: [
-                      FrostedContainer(
-                          width: 200,
-                          height: 300,
-                          childG: Wrap(
-                            children: [
-                              ...List.generate(
-                                colorPalette.length,
-                                (index) => CustomButton(
-                                  margin: EdgeInsets.all(4),
-                                  onPressed: () {},
-                                  animate: true,
-                                  isThreeD: true,
-                                  height: 54,
-                                  width: 52,
-                                  borderRadius: 100,
-                                  shadowColor: Colors.white,
-                                  backgroundColor: colorPalette[index].color,
-                                ),
-                              ),
-                            ],
-                          )),
-                      const SizedBox(
+                      FrostedContainer(width: 200, height: 300, childG: Wrap()),
+                      SizedBox(
                         height: 20,
                       ),
                       FrostedContainer(
@@ -91,12 +78,33 @@ class HomePage extends StatelessWidget {
                           ));
                     }),
                   ),
-                  const Column(
+                  Column(
                     children: [
                       FrostedContainer(
                         width: 200,
                         height: 300,
-                        childG: Wrap(),
+                        childG: Center(
+                          child: Wrap(
+                            children: [
+                              ...List.generate(
+                                colorPalette.length,
+                                (index) => CustomButton(
+                                  margin: EdgeInsets.all(4),
+                                  onPressed: () {
+                                    currentState.changeGradient(index);
+                                  },
+                                  animate: true,
+                                  isThreeD: true,
+                                  height: 54,
+                                  width: 52,
+                                  borderRadius: 100,
+                                  shadowColor: Colors.white,
+                                  backgroundColor: colorPalette[index].color,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       SizedBox(
                         height: 20,
