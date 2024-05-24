@@ -66,3 +66,6 @@ List<ColorModel> colorPalette = [
     ),
   ),
 ];
+
+const String github = "https://github.com/maheshparajuli";
+const String instagram = "";
