@@ -1,8 +1,18 @@
+import 'package:flutter/material.dart';
+
 class AppModel {
   String title;
   String assetPath;
-  IconData? icon;
+  IconData icon;
   Color color;
-  widget? screen;
+  Widget? screen;
   String link;
+
+  AppModel(
+      {required this.title,
+      required this.assetPath,
+      required this.icon,
+      required this.color,
+      required this.screen,
+      required this.link});
 }
