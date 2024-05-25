@@ -63,19 +63,11 @@ class HomePage extends StatelessWidget {
                     child: Consumer<CurrentState>(
                         builder: (context, ccurrentState, __) {
                       return DeviceFrame(
-                          device: currentState.currentDevice,
-                          screen: Container(
-                            color: Colors.red,
-                            child: const Center(
-                              child: Text(
-                                "Hello! Beautiful Souls",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 30.0,
-                                ),
-                              ),
-                            ),
-                          ));
+                        device: currentState.currentDevice,
+                        screen: Container(
+                          decoration: const BoxDecoration(),
+                        ),
+                      );
                     }),
                   ),
                   Column(
