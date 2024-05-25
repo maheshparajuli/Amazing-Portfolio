@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class AppModel {
   String title;
-  String assetPath;
-  IconData icon;
+  String? assetPath;
+  IconData? icon;
   Color color;
   Widget? screen;
-  String link;
+  String? link;
 
   AppModel(
       {required this.title,
