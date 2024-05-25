@@ -68,7 +68,9 @@ List<ColorModel> colorPalette = [
   ),
 ];
 
-List<AppModel> apps = [];
+List<AppModel> apps = [
+    AppModel(title: "About", icon:Icons.ac_unit_outlined, color: Colors.white);
+];
 const String github = "https://github.com/maheshparajuli";
 const String instagram = "https://www.instagram.com/drowninglekhnath";
 const String linkedin = "https://www.linkedin.com/maheshparajuli";
