@@ -69,7 +69,13 @@ List<ColorModel> colorPalette = [
 ];
 
 List<AppModel> apps = [
-    AppModel(title: "About", icon:Icons.ac_unit_outlined, color: Colors.white);
+  AppModel(title: "About", icon: Icons.ac_unit_outlined, color: Colors.white),
+  AppModel(title: "Github", icon: Icons.ac_unit_outlined, color: Colors.white),
+  AppModel(
+      title: "Linkedin", icon: Icons.ac_unit_outlined, color: Colors.white),
+  AppModel(
+      title: "Instagram", icon: Icons.ac_unit_outlined, color: Colors.white),
+  AppModel(title: "Email", icon: Icons.ac_unit_outlined, color: Colors.white),
 ];
 const String github = "https://github.com/maheshparajuli";
 const String instagram = "https://www.instagram.com/drowninglekhnath";
