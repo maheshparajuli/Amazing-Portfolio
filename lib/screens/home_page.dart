@@ -65,7 +65,9 @@ class HomePage extends StatelessWidget {
                       return DeviceFrame(
                         device: currentState.currentDevice,
                         screen: Container(
-                          decoration: const BoxDecoration(),
+                          decoration: const BoxDecoration(
+                            gradient: colorPalette[currentState.selectedwala].gradient
+                          ),
                         ),
                       );
                     }),
