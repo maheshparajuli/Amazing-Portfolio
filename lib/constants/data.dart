@@ -2,6 +2,7 @@ import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application/models/device_model.dart';
 import 'package:flutter_application/models/color_model.dart';
+import 'package:flutter_application/models/app_model.dart';
 
 List<DeviceModel> devices = [
   DeviceModel(device: Devices.android.onePlus8Pro, data: Icons.android),
@@ -67,6 +68,8 @@ List<ColorModel> colorPalette = [
   ),
 ];
 
+List<AppModel> apps = [];
 const String github = "https://github.com/maheshparajuli";
 const String instagram = "https://www.instagram.com/drowninglekhnath";
 const String linkedin = "https://www.linkedin.com/maheshparajuli";
+const String email = "maheshparajuli717@gmail.com";
